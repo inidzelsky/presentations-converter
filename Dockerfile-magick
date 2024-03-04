@@ -1,0 +1,15 @@
+FROM node:18-bullseye
+WORKDIR /app
+COPY . /app
+
+RUN apt-get -y update
+RUN apt-get -y upgrade
+RUN apt-get -y install build-essential
+RUN apt-get -y install ghostscript
+RUN wget https://imagemagick.org/archive/ImageMagick-7.1.1-29.tar.gz
+RUN mkdir ImageMagick && tar xvzf ImageMagick-7.1.1-29.tar.gz -C ImageMagick --strip-components 1
+
+WORKDIR /app/ImageMagick
+
+RUN ./configure && make
+RUN make install && ldconfig /usr/local/lib
