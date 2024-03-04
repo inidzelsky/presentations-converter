@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+      "module": "NodeNext",
+      "target": "ES2021",
+      "sourceMap": true,
+      "forceConsistentCasingInFileNames": true,
+      "noImplicitReturns": true,
+      "outDir": "dist",
+      "strict": true,
+      "exactOptionalPropertyTypes": true,
+      "noPropertyAccessFromIndexSignature": true,
+      "noImplicitOverride": true,
+      "noUnusedParameters": true,
+      "noUnusedLocals": true,
+      "noUncheckedIndexedAccess": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "useDefineForClassFields": true,
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true
+    },
+    "include": ["src"]
+  }
